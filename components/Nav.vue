@@ -32,11 +32,11 @@ import { ref } from 'vue';
 const isActive = ref(false)
 
 const menuList = ref([
-    { id: 0, label: "ABOUT US", url: "/", target:"" },
-    { id: 1, label: "ORIGINES", url: "work", target:"" },
-    { id: 1, label: "USAGES", url: "work", target:"" },
-    { id: 1, label: "ACTUALITY", url: "work", target:"" },
-    { id: 1, label: "FAQ", url: "work", target:"" },
+    { id: 0, label: "ACCUEIL", url: "/", target:"" },
+    { id: 1, label: "ABOUT US", url: "/about", target:"" },
+    { id: 1, label: "CONSEILS", url: "/conseil", target:"" },
+    { id: 1, label: "TENDANCE", url: "/tendance", target:"" },
+    { id: 1, label: "PK ZIBOULETTE", url: "/pourquoi", target:"" },
 ])
 
 const toggleActive = () => {
@@ -72,7 +72,7 @@ const toggleActive = () => {
       }
     }
     &-bar {
-      background-color: grey;
+      background-color: black;
       position: absolute;
       top: 50%;
       right: 6px;
@@ -105,7 +105,7 @@ const toggleActive = () => {
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: blue;
+      background-color: transparent;
       z-index: 49;
       display: none;
     }
@@ -121,22 +121,22 @@ const toggleActive = () => {
         font-weight: 700;
         font-style: italic;
         font-size: 56px;
-        color: green;
+        color: black;
         text-transform: uppercase;
       }
     }
   }
 
   &-text {
-    font-size: 22px;
+    font-size: 18px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    color: green;
+    color: black;
     margin-right: 64px;
     text-decoration: none;
     @media (max-width: 1169px) {
       margin-right: 0;
-      font-size: 32px;
+      font-size: 24px;
     }
   }
   &-items {
@@ -197,7 +197,7 @@ const toggleActive = () => {
     right: var(--margin);
     top: 4vh;
     z-index: 50;
-    background-color: blue;
+    background-color: white;
     padding: 6px 5px;
     border-radius: 13%;
     &.active {
