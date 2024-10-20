@@ -1,5 +1,5 @@
 <template>
-<h1 class="text-red-900 ">{{ title }}</h1>
+<h1 class="text-green-500 text-center lg:text-4xl text-3xl font-bold">{{ title }}</h1>
 </template>
 
 <script setup>

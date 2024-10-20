@@ -1,5 +1,5 @@
 <template>
-    <nav :class="['nav', { active: isActive }]">
+    <nav :class="['nav flex-row', { active: isActive }]">
       <div
         id="burger"
         :class="['nav-burger', { active: isActive }]"
@@ -11,11 +11,11 @@
           <span class="nav-burger-bar nav-burger-bar--3"></span>
         </button>
       </div>
-      <div class="nav-container full grid">
-        <div class="nav-container-title col-3">
+      <div class="nav-container full flex w-full">
+        <div class="nav-container-title lg:w-1/4">
           <span>Ziboueltte</span>
         </div>
-        <ul class="nav-items col-9">
+        <ul class="nav-items9 flex-col w-full flex lg:flex-row lg:w-3/4 items-center">
           <li v-for="item in menuList" :key="item.id" class="nav-link active">
             <RouterLink class="nav-text" :to="item.url" :target="item.target">{{
               item.label
@@ -99,7 +99,7 @@ const toggleActive = () => {
     }
   }
   &-container {
-    @media (max-width: 1169px) {
+    @media (max-width: 1024px) {
       position: fixed;
       left: 0;
       right: 0;
@@ -111,7 +111,7 @@ const toggleActive = () => {
     }
     &-title {
     //   display: none;
-      @media (max-width: 1169px) {
+      @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -134,7 +134,7 @@ const toggleActive = () => {
     color: black;
     margin-right: 64px;
     text-decoration: none;
-    @media (max-width: 1169px) {
+    @media (max-width: 1024px) {
       margin-right: 0;
       font-size: 24px;
     }
@@ -144,7 +144,7 @@ const toggleActive = () => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media (max-width: 1169px) {
+    @media (max-width: 1024px) {
       display: flex;
       flex-direction: column;
       gap: 32px;
@@ -154,7 +154,7 @@ const toggleActive = () => {
   &-right {
     justify-content: flex-end;
     align-items: center;
-    @media (max-width: 1169px) {
+    @media (max-width: 1024px) {
       display: flex;
       flex-direction: row;
       gap: 32px;
@@ -186,12 +186,12 @@ const toggleActive = () => {
   transform: rotate(-45deg);
   top: 50%;
 }
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1024px) {
   #burger {
     display: none;
   }
 }
-@media screen and (max-width: 1171px) {
+@media screen and (max-width: 1024px) {
   #burger {
     position: fixed;
     right: var(--margin);
